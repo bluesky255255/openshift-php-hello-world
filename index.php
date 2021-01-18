@@ -17,9 +17,9 @@ $host = str_ireplace('openshift-php-hello-world-git-demo.apps.', '', $host);
 $host = str_ireplace('.hkopenshift.com', '', $host);
 echo $host;
 $colour = $host;
-echo "<body style='background-color:" & $colour & "'>";                             
 ?>
-
+<body bgcolor="<?php echo $colour; ?>">
+  
 <?php $links = [];
   foreach($_ENV as $key => $value) {
     if(preg_match("/^(.*)_PORT_([0-9]*)_(TCP|UDP)$/", $key, $matches)) {
