@@ -8,13 +8,11 @@
 
 <?php echo "Hello World!"; ?>
 <?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?><br /><br />
-// <?php phpinfo(); ?><br /><br />
+<!-- comment <?php phpinfo(); ?><br /><br /> -->
 <?php echo $_SERVER['HTTP_HOST']; ?><br /><br />
   
 <?php
-$url = $_SERVER['HTTP_HOST'];
-$parse = parse_url($url);
-$host = $parse['host'];
+$host = $_SERVER['HTTP_HOST'];
 $host = str_ireplace('openshift-php-hello-world-git-demo.apps.', '', $host);
 echo $host;
 ?>
