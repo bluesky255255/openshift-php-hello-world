@@ -14,6 +14,7 @@
 <?php
 $host = $_SERVER['HTTP_HOST'];
 $host = str_ireplace('openshift-php-hello-world-git-demo.apps.', '', $host);
+$host = str_ireplace('.hkopenshift.com', '', $host);
 echo $host;
 ?>
 
