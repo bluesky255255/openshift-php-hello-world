@@ -8,7 +8,8 @@
 
 <?php echo "Hello World!"; ?>
 <?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?><br /><br />
-<?php phpinfo(); ?><br /><br />
+/*<?php phpinfo(); ?><br /><br />*/
+<?php echo $_SERVER['HTTP_HOST']; ?><br /><br />
 
 <?php $links = [];
   foreach($_ENV as $key => $value) {
