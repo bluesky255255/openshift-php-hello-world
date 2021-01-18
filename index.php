@@ -17,7 +17,7 @@ $host = str_ireplace('openshift-php-hello-world-git-demo.apps.', '', $host);
 $host = str_ireplace('.hkopenshift.com', '', $host);
 echo $host;
 $colour = $host;
-echo "<body style='background-color:' $colour >";                             
+echo "<body style='background-color:" $colour "'>";                             
 ?>
 
 <?php $links = [];
